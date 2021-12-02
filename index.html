@@ -16,14 +16,15 @@
 <body>
     <div class="shadow-lg p-3 mb-5 bg-white rounded container mt-4">
         <div class="card">
-            <div class="card-header">
-                <h4 class="font-weight-bold">UNFinished Business Job Application</h4>
-                <p id="todaysDate"></p>
+          <div class="card-header" style="background-color: #0a233f;">
+            <div>
+              <img src="images/bird.png" alt="Logo" width="100" height="100" /></div>
+                   <h4 class="font-weight-bold text-white">UNFinished Business Job Application</h4>
             </div>
             <div class="card-body">
               <form>
                 <!--Contact Information-->
-                <div class="personalInformation">
+                <div id="personalInformation">
                   <h5 class="text-primary">Contact Information</h5><hr>
                   <div class="form-row">
                     <div class="col-lg-4">
@@ -190,7 +191,7 @@
                 </div><!--end section2-->
                 
                 <!--Education-->
-                <div class="education">
+                <div id="education" class="mb-5">
                   <h5 class="text-primary">Educational Background</h5><hr>
                   <div class="form-row">
                     <div class="form-group col-md-6">
@@ -211,30 +212,189 @@
                       <label for="otherEducation">If you've chosen other, please explain</label>
                     </div>
                   </div>
-                  <label for="">Add education details below</label>
-                  <div class="#">
-                    <div class="form-group">
-                      <div class="card p-3">
-                        
-                      </div>  
-                    </div>
-                  </div>
-
-                  
                 </div><!--end section3-->
 
 
-                <!--Work History-->
-
+                <!--Work History-->      
+                <div id="workHistory" class="mb-5">
+                  <h5 class="text-primary">Work History</h5>
+                  <p class="text-secondary">Enter your most recent work history details below</p>
+                  <hr>
+  
+                  <label for="currentJob">Current job?</label> <span class="text-danger">*</span>
+                  <input type="checkbox">
+                  <div class="form-group">
+                      <input type="text" class="form-control" id="inputEmployer" placeholder="Enter Previous Employer Name">
+                      <label for="inputEmployer">Employer Name <span class="text-danger">*</span></label>
+                    </div>
+  
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="inputAddress3" placeholder="Enter Employer Address">
+                      <label for="inputAddress3">Employer Address</label>
+                    </div>
+  
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="inputCity">
+                        <label for="inputCity">City <span class="text-danger">*</span></label>
+                      </div>
+  
+                      <div class="form-group col-md-4">
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option value="" selected="selected">Select a State</option>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                          <option value="CT">Connecticut</option>
+                          <option value="DE">Delaware</option>
+                          <option value="DC">District Of Columbia</option>
+                          <option value="FL">Florida</option>
+                          <option value="GA">Georgia</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="ID">Idaho</option>
+                          <option value="IL">Illinois</option>
+                          <option value="IN">Indiana</option>
+                          <option value="IA">Iowa</option>
+                          <option value="KS">Kansas</option>
+                          <option value="KY">Kentucky</option>
+                          <option value="LA">Louisiana</option>
+                          <option value="ME">Maine</option>
+                          <option value="MD">Maryland</option>
+                          <option value="MA">Massachusetts</option>
+                          <option value="MI">Michigan</option>
+                          <option value="MN">Minnesota</option>
+                          <option value="MS">Mississippi</option>
+                          <option value="MO">Missouri</option>
+                          <option value="MT">Montana</option>
+                          <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                          <option value="NH">New Hampshire</option>
+                          <option value="NJ">New Jersey</option>
+                          <option value="NM">New Mexico</option>
+                          <option value="NY">New York</option>
+                          <option value="NC">North Carolina</option>
+                          <option value="ND">North Dakota</option>
+                          <option value="OH">Ohio</option>
+                          <option value="OK">Oklahoma</option>
+                          <option value="OR">Oregon</option>
+                          <option value="PA">Pennsylvania</option>
+                          <option value="RI">Rhode Island</option>
+                          <option value="SC">South Carolina</option>
+                          <option value="SD">South Dakota</option>
+                          <option value="TN">Tennessee</option>
+                          <option value="TX">Texas</option>
+                          <option value="UT">Utah</option>
+                          <option value="VT">Vermont</option>
+                          <option value="VA">Virginia</option>
+                          <option value="WA">Washington</option>
+                          <option value="WV">West Virginia</option>
+                          <option value="WI">Wisconsin</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                        <label for="inputState">State <span class="text-danger">*</span></label>
+                      </div>
+                      <div class="form-group col-md-2"> 
+                        <input type="text" class="form-control" id="inputZip">
+                        <label for="inputZip">Zip <span class="text-danger">*</span></label>
+                      </div>
+  
+                      <div class="form-group col-md-4">
+                          <input type="tel" class="form-control" id="phoneNumber" placeholder="#######">
+                          <label for="phoneNumber">Phone Number <span class="text-danger">*</span></label>
+                      </div>
+  
+                      
+                      <div class="form-group col-md-4">
+                          <input type="email" class="form-control" id="inputEmail4">
+                          <label for="inputEmail4">Email <span class="text-danger">*</span></label>
+                      </div>
+  
+                      <div class="form-group col-md-4">
+                          <input type="text" class="form-control" id="jobTitle">
+                          <label for="jobTitle">Previous Job Title <span class="text-danger">*</span></label>
+                      </div>                   
+                      
+                      <div class="form-group col-md-4">
+                        <textarea class="form-control" rows="4" cols="50" name="comment" form="usrform" placeholder="Enter text here..."></textarea>
+                      <label for="textarea">List of Duties, Skills, and Promotions earned <span class="text-danger">*</span></label>
+                      </div> 
+                  </div>
+                </div>
+  
                 <!--Attach resume-->
+                <div id="resume" class="mb-5">
+                  <h5 class="text-primary">Upload Resume</h5>
+                  <p class="text-secondary">Attach your resume and other documents</p><hr>
+                
+                  <label for="img">Select resume:</label><span class="text-danger">*</span>
+                  <input type="file" id="img" name="img" accept="image/*"><br>
+                  
+                  <label for="img">Select other documents:</label>
+                  <input type="file" id="img" name="img" accept="image/*">
+
+      
+                </div>
+  
+  
                 
                 <!--Additional skills-->
-
-                <!--References-->
-
-                <!--Military-->
-
+                <div id="additionalSkills" class="mb-5">
+                  <h5 class="text-primary">Additional professional skills</h5>
+                  <p class="text-secondary">Provide any additional skills, experiences, or other notable information for your application</p><hr>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="4" name="comment" form="usrform" placeholder="Enter skills, etc.."></textarea>
+                  </div>
+                </div>
                 
+                
+              
+
+              <!--References-->
+              <div id="references">
+                <h5 class="text-primary">Refrences</h5>
+                <p class="text-secondary">Enter at lease one professional reference</p><hr>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name">
+                    <label for="name">Name <span class="text-danger">*</span></label>
+                  </div>
+  
+                  <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="title" placeholder="Enter Title">
+                    <label for="title">Title <span class="text-danger">*</span></label>
+                  </div>
+  
+                  <div class="form-group col-md-4">
+                    <input type="text" class="form-control" id="company" placeholder="Enter Company">
+                    <label for="company">Company<span class="text-danger">*</span></label>
+                  </div>
+                </div>
+                
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <input type="tel" class="form-control" id="phoneNumber" placeholder="#######">
+                    <label for="phoneNumber">Phone Number <span class="text-danger">*</span></label>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter Email">
+                    <label for="inputEmail4">Email <span class="text-danger">*</span></label>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                  <label for="inputEmail4">Relationship <span class="text-danger">*</span></label>
+                </div>
+
+                </div>
+
+                   
+              </div>
+              <button type="button" class="btn btn-success">Submit</button>
               </form>
             </div>
         </div>
